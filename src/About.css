@@ -1,0 +1,37 @@
+ .btn1 {
+    display: flex;
+    margin: auto;
+    text-decoration: none;
+    outline: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    /* background: #009aff; */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    animation: pulse 2s ease-out infinite;
+  }
+  
+  btn1 span {
+    margin: auto;
+    color: transparent;
+    text-shadow: 0 0 0 white;
+   }
+  
+  .btn1::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0px ,0 0 0 0px rgba(0, 221, 221, 0.85);  }
+    50% { transform: scale(0.95); }
+    100% { box-shadow: 0 0 0 15px rgba(0,210,255,0),0 0 0 30px rgba(0,210,255,0); }
+  }
